@@ -117,6 +117,7 @@
 
     .nav-links a {
       transition: color 180ms ease;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -386,7 +387,8 @@
     .product p,
     .focus-item p,
     .partner p,
-    .contact-card p {
+    .contact-card p,
+    .nosera-body p {
       margin: 12px 0 0;
       color: var(--muted);
     }
@@ -537,6 +539,65 @@
       gap: 18px;
     }
 
+    /* nosera OS section */
+
+    .nosera-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .nosera-card {
+      padding: clamp(30px, 5vw, 46px);
+      border-radius: var(--radius);
+      border: 1px solid var(--line-soft);
+      background:
+        linear-gradient(145deg, rgba(216, 189, 122, 0.08), rgba(159, 217, 199, 0.03)),
+        rgba(6, 7, 10, 0.9);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .nosera-card h3 {
+      font-size: clamp(26px, 3vw, 34px);
+    }
+
+    .nosera-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .nosera-pill {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line-soft);
+      background: rgba(5, 6, 8, 0.9);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nosera-body h3 {
+      font-size: 20px;
+      margin-top: 18px;
+    }
+
+    .nosera-body ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .nosera-body li + li {
+      margin-top: 4px;
+    }
+
     @media (max-width: 980px) {
       .nav {
         align-items: flex-start;
@@ -554,7 +615,8 @@
       .section-head,
       .about-layout,
       .partner-band,
-      .contact-wrap {
+      .contact-wrap,
+      .nosera-layout {
         grid-template-columns: 1fr;
       }
 
@@ -579,6 +641,10 @@
       .product small {
         margin-bottom: 70px;
       }
+
+      .nosera-meta {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 700px) {
@@ -596,7 +662,8 @@
 
       .hero-meta,
       .focus-list,
-      .signals {
+      .signals,
+      .nosera-meta {
         grid-template-columns: 1fr;
       }
 
@@ -650,6 +717,7 @@
       <div class="nav-links" aria-label="Page sections">
         <a href="#about">About</a>
         <a href="#products">Products</a>
+        <a href="#nosera">nosera OS</a>
         <a href="#research">Research</a>
         <a href="#partners">Partners</a>
         <a class="button" href="#contact">Contact</a>
@@ -668,7 +736,7 @@
           </p>
           <div class="hero-actions">
             <a class="button" href="#products">Explore Products</a>
-            <a class="button secondary" href="mailto:contact@mintiquex.com">Start a Conversation</a>
+            <a class="button secondary" href="#nosera">View nosera OS</a>
           </div>
           <div class="hero-meta" aria-label="Studio pillars">
             <div class="meta-item">
@@ -760,6 +828,70 @@
             <h3>N-MO8</h3>
             <p>A modular research and product initiative exploring compact, specialized AI capabilities for practical deployment.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosera">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">nosera OS</p>
+            <h2>nosera OS — AI Business Operating System.</h2>
+          </div>
+          <p class="lead">
+            nosera OS is an AI-native operating system for small businesses, creators, and multilingual communities. It coordinates multiple agents, long-term memory, and safe automation so everyday work can be handled with clarity and control.
+          </p>
+        </div>
+
+        <div class="nosera-layout">
+          <div class="nosera-card">
+            <h3>AI operating system for real work.</h3>
+            <div class="nosera-body">
+              <p>
+                nosera OS provides a structured environment where AI agents can support operations, content, and community work without feeling like a generic chat window. It is designed for teams that need reliability, not hype.
+              </p>
+
+              <h3>Multi-agent workflow automation</h3>
+              <p>
+                Multiple agents can collaborate on tasks such as research, drafting, summarization, and follow-up. Workflows can be configured to include human review steps, making it suitable for small teams and lean operations.
+              </p>
+
+              <h3>Long-term memory and context</h3>
+              <p>
+                nosera OS maintains project context, decisions, and references over time. This allows agents to respond with continuity, even across languages and longer time spans, supporting multilingual and cross-border work.
+              </p>
+
+              <h3>Safety, access, and auditability</h3>
+              <p>
+                Access control, activity logs, and audit trails are core design elements. Teams can see what agents did, which data was used, and how outputs were produced, supporting responsible use in business settings.
+              </p>
+            </div>
+          </div>
+
+          <div class="nosera-body">
+            <h3>MA Engine and interaction quality</h3>
+            <p>
+              nosera OS is powered by MA Engine for conversational timing, cultural context, silence, and response pacing. The goal is not to talk more, but to respond at the right depth and rhythm for each situation.
+            </p>
+
+            <h3>Business model</h3>
+            <p>
+              nosera OS is being developed as a subscription SaaS product. Pricing is planned around workspace usage, agent activity, and underlying AI usage, so smaller teams can start modestly and grow over time.
+            </p>
+
+            <h3>Initial customers</h3>
+            <ul>
+              <li>Small businesses and startups running lean operations</li>
+              <li>Creators managing content, research, and audience workflows</li>
+              <li>Community operators working across languages and regions</li>
+            </ul>
+
+            <h3>Cloud infrastructure</h3>
+            <p>
+              Azure, AWS, and Google Cloud are being evaluated and used as development and deployment environments. The goal is to keep nosera OS flexible, reliable, and ready for international use.
+            </p>
+          </div>
         </div>
       </div>
     </section>
